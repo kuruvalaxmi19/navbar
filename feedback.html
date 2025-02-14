@@ -1,0 +1,85 @@
+<!--
+Create a Feedback form using HTML (With Internal CSS), it should contain
+
+-> Name (optional)
+
+-> Email(Optional)
+
+-> phone (optional)
+
+-> Rating
+
+-> Any Questions regarding product or service.
+
+-> Additional comments (optional)
+
+-> Submit button-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label, textarea, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="name">Name (Optional):</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email (Optional):</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone (Optional):</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Good</option>
+                <option value="2">Fair</option>
+                <option value="1">Poor</option>
+            </select>
+
+            <label for="questions">Any Questions regarding product or service:</label>
+            <textarea id="questions" name="questions" rows="4" required></textarea>
+
+            <label for="comments">Additional Comments (Optional):</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
